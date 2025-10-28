@@ -1,0 +1,28 @@
+# Ignorar arquivos de cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar ambientes virtuais
+.venv/
+.env/
+
+# Ignorar arquivos de dados brutos dentro de raw, mas manter a pasta
+data/raw/*
+!data/raw/.gitkeep   # mantém o arquivo placeholder
+
+# Ignorar arquivos processados (CSV)
+data/processed/*
+!data/processed/.gitkeep  # mantém a pasta vazia
+
+# Ignorar arquivos temporários de editores
+*.swp
+*.swo
+*.DS_Store
+*.idea/
+*.vscode/
+
+# Ignorar logs
+*.log
+
