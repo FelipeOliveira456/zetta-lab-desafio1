@@ -4,12 +4,35 @@
 **Etapa:** Desafio I (Filtro Inicial) do Zetta Lab 2025/2  
 **Trilha:** Ciência e Governança de Dados  
 
-Este projeto teve como objetivo analisar os dados de 2024 da **PNADC (Pesquisa Nacional por Amostra de Domicílios Contínua)** do IBGE, com foco em **desigualdades raciais**. Foram realizadas **análises exploratórias de dados** e limpeza das bases, produzindo um conjunto de dados tratados e visualizações para apoiar a análise.
+> **Observação:** Este projeto é exclusivo para a etapa do Zetta Lab 2025/2.
 
+Este projeto teve como objetivo analisar os dados de 2024 da **PNADC (Pesquisa Nacional por Amostra de Domicílios Contínua)** do IBGE, com foco em **desigualdades raciais**.  
+
+### **Escolha dos dados**
+A PNADC fornece informações detalhadas sobre características socioeconômicas da população brasileira, como renda, escolaridade, acesso a serviços e auxílios. Esses dados permitem analisar **desigualdades entre grupos raciais**, que é o foco do projeto.
+
+### **Metodologia de aquisição**
+Os dados originais são obtidos diretamente do IBGE em formatos `.txt` e `.xls`. Para lidar com o tamanho e a complexidade dos arquivos:
+- Foi criado o script `download_data.py` para baixar e organizar os arquivos brutos;
+- O script `process_data.py` realiza a **limpeza e transformação**, preparando os dados para análise exploratória.
+
+### **Principais passos do notebook**
+O notebook `01_eda.ipynb` segue as etapas:
+1. Carregamento e inspeção dos dados brutos;
+2. Limpeza de inconsistências e padronização de variáveis;
+3. Análise exploratória de dados (EDA) focada em desigualdades raciais;
+4. Geração de gráficos e figuras para visualização de padrões socioeconômicos entre grupos raciais.
+
+### **Principais insights da análise**
+- Diferenças significativas de rendimento médio entre grupos raciais;
+- Variações no acesso a serviços públicos e auxílios governamentais;
+- Relação entre escolaridade e posse de bens/propriedade;
+- Padrões de desigualdade que reforçam a necessidade de políticas públicas direcionadas.
 ---
 
 ## Estrutura de Pastas
 
+```code
 zetta-lab-desafio1
 ├── data
 │   └── raw
@@ -17,6 +40,7 @@ zetta-lab-desafio1
 ├── reports
 │   └── figures
 └── src
+```
 
 ### **data**
 Contém os arquivos de dados utilizados no projeto, organizados em duas subpastas:
