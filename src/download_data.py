@@ -48,8 +48,7 @@ def baixar_pnadc_2024(BASE_DIR):
     ftp.quit()
     print("Download PNADC 2024 concluído!")
 
-# Exemplo de uso
 if __name__ == "__main__":
-    BASE_DIR = "../data/raw"
+    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data/raw"))
     baixar_pnadc_2024(BASE_DIR)
 

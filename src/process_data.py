@@ -9,8 +9,10 @@ def generate_pnadc_csv():
 
     Todos os caminhos e arquivos estão fixos dentro da função.
     """
-    input_dir = "../data/raw/"
-    output_dir = "../data/processed"
+    
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    input_dir = os.path.join(BASE_DIR, "../data/raw")
+    output_dir = os.path.join(BASE_DIR, "../data/processed")
     chunk_size = 10000  
 
     os.makedirs(output_dir, exist_ok=True)
@@ -80,18 +82,18 @@ def generate_pnadc_csv():
 
         print(f"Arquivo {output_file} criado com sucesso!")
 
-def read_pnadc_csv(ano=2024, visita=1, data_dir="../data/processed"):
+def read_pnadc_csv():
     """
     Lê o CSV processado do PNADC em um DataFrame.
-
-    Parâmetros:
-    - ano: int, ano do arquivo PNADC
-    - visita: int, número da visita (geralmente 1)
-    - data_dir: diretório onde os CSVs processados estão salvos
 
     Retorna:
     - pandas.DataFrame
     """
+    ano = 2024
+    visita = 1
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(BASE_DIR, "../data/processed")
+    
     file_name = f"PNADC_{ano}_visita{visita}.csv"
     file_path = os.path.join(data_dir, file_name)
 
